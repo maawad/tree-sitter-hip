@@ -51,7 +51,8 @@
       "scope": "source.cpp",
       "file-types": [
         "cu",
-        "cuh"
+        "cuh",
+        "hip"
       ],
       "highlights": [
         "queries/highlights.scm",
