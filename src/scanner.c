@@ -123,7 +123,7 @@ bool tree_sitter_cuda_external_scanner_scan(void *payload, TSLexer *lexer, const
 }
 
 unsigned tree_sitter_cuda_external_scanner_serialize(void *payload, char *buffer) {
-    static_assert(MAX_DELIMITER_LENGTH * sizeof(wchar_t) < TREE_SITTER_SERIALIZATION_BUFFER_SIZE,
+    _Static_assert(MAX_DELIMITER_LENGTH * sizeof(wchar_t) < TREE_SITTER_SERIALIZATION_BUFFER_SIZE,
                   "Serialized delimiter is too long!");
 
     Scanner *scanner = (Scanner *)payload;
